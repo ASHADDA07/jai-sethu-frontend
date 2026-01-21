@@ -1,0 +1,496 @@
+.screen {
+  min-height: 100vh;
+}
+
+/* INTRO */
+.intro-screen{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
+  background:
+    radial-gradient(circle at 20% 20%, #2563eb, transparent 40%),
+    radial-gradient(circle at 80% 30%, #7c3aed, transparent 45%),
+    radial-gradient(circle at 50% 80%, #db2777, transparent 40%),
+    linear-gradient(180deg, #020617, #020617);
+}
+
+.brand-logo {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin: 0;
+
+  background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+
+  /* Required for text gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Chrome / Edge */
+  -webkit-text-fill-color: transparent;
+
+  /* Fallback */
+  color: transparent;
+}
+
+
+.brand-tagline{
+  margin-top: 12px;
+  color: #c7d2fe;
+}
+
+.intro-roles{
+  margin-top: 40px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.role-btn{
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.10);
+  color:white;
+  cursor:pointer;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+.role-btn:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.20);
+}
+
+/* DASHBOARDS */
+.topbar{
+  height:64px;
+  display:flex;
+  align-items:center;
+  padding: 0 22px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.public-screen{ background:#f1f5f9; }
+.student-screen{ background: linear-gradient(180deg, #f5f3ff, #ecfeff); }
+.lawyer-screen{ background:#f0fdf4; }
+
+.topbar-public{ background:#0f172a; color:#fff; }
+.topbar-student{ background:#4c1d95; color:#fff; }
+.topbar-lawyer{ background:#052e16; color:#fff; }
+
+.public-context, .student-context, .lawyer-context{
+  padding: 28px;
+}
+/* ==============================
+   DASHBOARD TILES (PUBLIC)
+   ============================== */
+
+.public-options {
+  padding: 20px 28px 40px;
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+}
+
+@media (min-width: 720px) {
+  .public-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dash-tile {
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  padding: 22px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.dash-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+}
+
+.dash-tile h3 {
+  margin: 0 0 6px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.dash-tile p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.tile-ai { border-left: 6px solid #3b82f6; }
+.tile-lawyer { border-left: 6px solid #8b5cf6; }
+.tile-cases { border-left: 6px solid #22c55e; }
+.tile-evidence { border-left: 6px solid #f97316; }
+
+/* ==============================
+   SUBSCREEN STYLES
+   ============================== */
+
+.subscreen-wrap{
+  padding: 28px;
+  max-width: 980px;
+}
+
+.subscreen-wrap h2{
+  margin-top: 10px;
+  color: #1e3a8a;
+}
+
+.subscreen-card{
+  margin-top: 18px;
+  background: white;
+  border-radius: 18px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.subscreen-card ul{
+  margin: 12px 0 0;
+  color: #475569;
+}
+
+.muted{
+  color: #64748b;
+}
+
+.disclaimer{
+  margin-top: 18px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* topbar action button */
+.topbar-action{
+  margin-left: auto;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.10);
+  color: #ffffff;
+  cursor: pointer;
+}
+.topbar-action:hover{
+  background: rgba(255,255,255,0.20);
+}
+/* ==============================
+   STUDENT DASHBOARD OPTIONS
+   ============================== */
+
+.student-options{
+  padding: 20px 28px 40px;
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+}
+
+@media (min-width: 720px) {
+  .student-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.student-title{
+  color: #4c1d95;
+}
+
+.tile-constitution { border-left: 6px solid #7c3aed; }
+.tile-judgments { border-left: 6px solid #06b6d4; }
+.tile-sections { border-left: 6px solid #a78bfa; }
+/* ==============================
+   LAWYER DASHBOARD OPTIONS
+   ============================== */
+
+.lawyer-options{
+  padding: 20px 28px 40px;
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+}
+
+@media (min-width: 720px) {
+  .lawyer-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.lawyer-title{
+  color: #065f46;
+}
+
+.tile-intake { border-left: 6px solid #10b981; }
+.tile-assistant { border-left: 6px solid #22c55e; }
+.tile-drafts { border-left: 6px solid #059669; }
+.tile-overview { border-left: 6px solid #16a34a; }
+/* ==========================================
+   FOUNDER CHANNEL SCREEN (GLOBAL)
+   ========================================== */
+
+.founder-screen{
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  overflow-y: auto;
+}
+
+.topbar-founder{
+  background: #0b1220;
+  color: #fff;
+}
+
+.tile-founder{
+  border-left: 6px solid #f59e0b;
+}
+
+.founder-card{
+  border: 1px solid rgba(99,102,241,0.18);
+}
+
+.founder-meta{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.founder-chip{
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  background: rgba(15,23,42,0.08);
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.founder-chip-soft{
+  background: rgba(99,102,241,0.12);
+  color: #3730a3;
+}
+
+.founder-form{
+  margin-top: 10px;
+}
+
+.founder-grid{
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 740px){
+  .founder-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-full{
+  grid-column: 1 / -1;
+}
+
+.field label{
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.field input,
+.field select,
+.field textarea{
+  border: 1px solid rgba(15,23,42,0.14);
+  border-radius: 14px;
+  padding: 12px 12px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+}
+
+.field textarea{
+  resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color: rgba(99,102,241,0.7);
+  box-shadow: 0 0 0 5px rgba(99,102,241,0.14);
+}
+
+.founder-submit{
+  margin-top: 14px;
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  background: linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6);
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.founder-submit:hover{
+  transform: translateY(-2px);
+}
+
+.founder-status{
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.founder-status.success{
+  background: rgba(34,197,94,0.14);
+  color: #065f46;
+  border: 1px solid rgba(34,197,94,0.25);
+}
+
+.founder-status.error{
+  background: rgba(239,68,68,0.12);
+  color: #7f1d1d;
+  border: 1px solid rgba(239,68,68,0.25);
+}
+
+.founder-status.loading{
+  background: rgba(99,102,241,0.12);
+  color: #312e81;
+  border: 1px solid rgba(99,102,241,0.25);
+}
+/* =========================================================
+   FOUNDER RIBBON (SPECIAL UNIQUE CTA)
+   This must stand out from other options.
+   ========================================================= */
+
+.founder-ribbon{
+  margin: 20px 28px 40px;
+  border-radius: 22px;
+  padding: 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+
+  background:
+    radial-gradient(circle at 10% 10%, rgba(245,158,11,0.35), transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(239,68,68,0.30), transparent 45%),
+    radial-gradient(circle at 60% 90%, rgba(139,92,246,0.35), transparent 45%),
+    linear-gradient(90deg, rgba(2,6,23,0.94), rgba(15,23,42,0.94));
+
+  color: white;
+  position: relative;
+  overflow: auto;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+
+/* animated shine sweep */
+.founder-ribbon::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.12),
+    transparent
+  );
+  animation: founderShine 3.6s ease-in-out infinite;
+}
+
+@keyframes founderShine{
+  0% { left: -60%; }
+  55% { left: 110%; }
+  100% { left: 110%; }
+}
+
+.founder-ribbon-left{
+  max-width: 720px;
+  z-index: 1;
+}
+
+.founder-ribbon h3{
+  margin: 10px 0 6px;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.founder-ribbon p{
+  margin: 0;
+  color: rgba(255,255,255,0.78);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.founder-badge{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* right side button */
+.founder-ribbon-right{
+  z-index: 1;
+}
+
+.founder-ribbon-btn{
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 14px 18px;
+
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+
+  background: linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6);
+  color: white;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,0.30);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.founder-ribbon-btn:hover{
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.06);
+}
+
+@media (max-width: 680px){
+  .founder-ribbon{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .founder-ribbon-btn{
+    width: 100%;
+  }
+}
+.public-screen {
+  overflow-y: auto;
+}
