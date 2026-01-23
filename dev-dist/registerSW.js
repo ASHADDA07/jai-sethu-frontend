@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/jai-sethu-frontend/dev-sw.js?dev-sw', { scope: '/jai-sethu-frontend/', type: 'classic' })
