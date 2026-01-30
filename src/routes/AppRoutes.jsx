@@ -2,6 +2,9 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import Intro from "../pages/Intro.jsx";
 import TalkToFounder from "../pages/common/TalkToFounder.jsx";
+import ChatHome from "../pages/chat/ChatHome";
+import CaseChat from "../pages/chat/CaseChat";
+
 
 // Role dashboards
 import Public from "../pages/Public.jsx";
@@ -44,6 +47,7 @@ export default function AppRoutes() {
       <Route path="/student/constitution" element={<StudentConstitution />} />
       <Route path="/student/judgments" element={<StudentJudgments />} />
       <Route path="/student/sections" element={<StudentSections />} />
+      <Route path="/student/notes" element={<StudentNotes />} />
             {/* LAWYER subscreens */}
       <Route path="/lawyer/intake" element={<LawyerIntake />} />
       <Route path="/lawyer/assistant" element={<LawyerAssistant />} />
@@ -51,6 +55,9 @@ export default function AppRoutes() {
       <Route path="/lawyer/overview" element={<LawyerOverview />} />
 
       <Route path="/founder" element={<TalkToFounder />} />
+
+<Route path="/chat" element={<ChatHome />} />
+<Route path="/chat/:caseId" element={<CaseChat />} />
 
 
 
